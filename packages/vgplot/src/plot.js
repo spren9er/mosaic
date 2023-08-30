@@ -1,4 +1,5 @@
-import { coordinator, distinct, synchronizer, AsyncDispatch } from '@uwdata/mosaic-core';
+import { coordinator, distinct, synchronizer } from '@uwdata/mosaic-core';
+import { AsyncDispatch } from './util/AsyncDispatch.js';
 import { plotRenderer } from './plot-renderer.js';
 
 const DEFAULT_ATTRIBUTES = {
