@@ -24,7 +24,7 @@ export class Interval1D {
     this.field = field || getField(mark, [channel, channel+'1', channel+'2']);
     this.style = style && sanitizeStyles(style);
     this.brush = channel === 'y' ? brushY() : brushX();
-    this.brush.on('brush end', ({ selection }) => this.publish(selection));
+    this.brush.on('end', ({ selection }) => this.publish(selection));
   }
 
   reset() {

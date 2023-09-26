@@ -26,7 +26,7 @@ export class Interval2D {
     this.yfield = yfield || getField(mark, ['y', 'y1', 'y2']);
     this.style = style && sanitizeStyles(style);
     this.brush = brush();
-    this.brush.on('brush end', ({ selection }) => this.publish(selection));
+    this.brush.on('end', ({ selection }) => this.publish(selection));
   }
 
   reset() {
